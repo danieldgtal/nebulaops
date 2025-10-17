@@ -17,20 +17,20 @@ It combines **Infrastructure as Code (IaC)**, **Temporal orchestration**, **DevO
 
 ---
 
-sequenceDiagram
+sequenceDiagram  
 participant User 
-participant UI as React Login(Auth)
-participant API as Python Backend
-participant Worker as Go Temporal Worker
-participant Infra as Terraform/Ansible
+participant UI as React Login(Auth)  
+participant API as Python Backend  
+participant Worker as Go Temporal Worker  
+participant Infra as Terraform/Ansible  
 
-User->>UI: Click "Provision Resource"
-UI->>API: POST /api/v1/resources
-API->>Worker: Trigger Temporal Workflow
-Worker->>Infra: Run Terraform + Ansible
-Infra->>Worker: Return Status
-Worker->>API: Update Workflow State
-API->>UI: Return Status / Result
+User ->> UI: Click "Provision Resource"  
+UI ->> API: POST /api/v1/resources  
+API ->> Worker: Trigger Temporal Workflow  
+Worker ->> Infra: Run Terraform + Ansible  
+Infra ->> Worker: Return Status  
+Worker ->> API: Update Workflow State  
+API ->> UI: Return Status / Result  
 
 # NebulaOps - MVP PoC Scaffold
 
