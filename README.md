@@ -1,7 +1,7 @@
 # nebulaops
 # 🌌 NebulaOps — Hybrid Compute Platform (PoC)
 
-**NebulaOps** is a proof-of-concept hybrid compute platform inspired by enterprise-scale environments (like RBC Compute Platform).  
+**NebulaOps** is a proof-of-concept hybrid compute platform inspired by enterprise-scale environments  
 It combines **Infrastructure as Code (IaC)**, **Temporal orchestration**, **DevOps best practices**, and **AI-driven insights** — all within a clean, scalable monorepo setup.
 
 ---
@@ -107,11 +107,10 @@ nebulaops/
 - **Tailwind CSS** for styling
 - **Axios** for API calls
 - **React Router** for navigation
-- Just 4-5 components total
 
 ### Backend
 - **FastAPI** (Python 3.11+)
-- **SQLite** (no Postgres setup needed initially)
+- **SQLite or MongoDB** (no Postgres setup needed initially)
 - **Temporal Python SDK** (client only)
 - **JWT** for auth (simple hardcoded user is fine)
 - 3 API endpoints: auth, create resource, get status
